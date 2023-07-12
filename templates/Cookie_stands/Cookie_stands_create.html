@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+  <div
+    class="w-full max-w-sm p-4 bg-gray-700 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <form method="post" style="background-color: rgba(125, 125, 128, 0.5);">
+      {% csrf_token %}
+      <div style="margin-left: 5px; padding-top: 10px; padding-bottom: 5px;">
+        {{ form.as_p }}
+      </div>
+      <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        Create
+      </button> 
+    </form>
+
+  </form>
+  </div>
+
+{% endblock content %}
